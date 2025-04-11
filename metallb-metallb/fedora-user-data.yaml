@@ -17,7 +17,7 @@ runcmd:
 
   # Docker installation
   - [ dnf, -y, install, dnf-plugins-core ]
-  - [ dnf, config-manager, --add-repo, https://download.docker.com/linux/fedora/docker-ce.repo ]
+  - [ dnf-3, config-manager, --add-repo, https://download.docker.com/linux/fedora/docker-ce.repo ]
   - [ dnf, install, -y, docker-ce, docker-ce-cli, containerd.io, docker-buildx-plugin, docker-compose-plugin ]
   - [ systemctl, enable, --now, docker ]
   - [ usermod, -aG, docker, onp ]
