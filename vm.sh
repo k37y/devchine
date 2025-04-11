@@ -33,8 +33,8 @@ sudo cp ${DOWNLOAD} ${DISK}
 sudo virsh -q destroy ${VM_NAME} > /dev/null || true
 sudo virsh -q undefine ${VM_NAME} > /dev/null || true
 sudo virt-install --name ${VM_NAME} \
-                  --vcpus 1 \
-                  --ram 2048 \
+                  --vcpus 2 \
+                  --ram 4096 \
                   --os-variant fedora-unknown \
                   --import \
                   ${NETWORK} \
