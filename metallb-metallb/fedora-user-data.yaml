@@ -8,6 +8,7 @@ packages:
   - pip
   - make
   - lua
+  - jq
 runcmd:
   - [ modprobe, ip_tables ]
   - [ modprobe, ip6_tables ]
